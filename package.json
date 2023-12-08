@@ -23,6 +23,7 @@
     "react-redux": "^9.0.2",
     "react-router-dom": "^6.20.1",
     "redux-persist": "^6.0.0",
+    "rollup": "^4.7.0",
     "twin.macro": "^3.4.0"
   },
   "devDependencies": {
