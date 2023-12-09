@@ -1,10 +1,16 @@
+import '../node_modules/modern-normalize/modern-normalize.css';
+import { Global } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './app/App.jsx';
-import './index.css';
+import globalStyles from './styles/globalStyles.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <BrowserRouter basename="/car-rent/">
+    <Global styles={globalStyles} />
+    {/* <Provider> */}
     <App />
-  </React.StrictMode>
+    {/* </Provider> */}
+  </BrowserRouter>
 );

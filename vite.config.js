@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
+
+console.log('Routes path', path.resolve(__dirname, './', 'src', 'routes'));
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,36 +14,15 @@ export default defineConfig({
       jsx: 'automatic',
     },
   },
-  plugins: [
-    react({
-      babel: {
-        plugins: [
-          '@emotion',
-          'babel-plugin-macros',
-          [
-            '@emotion/babel-plugin-jsx-pragmatic',
-            {
-              export: 'jsx',
-              import: '__cssprop',
-              module: '@emotion/react',
-            },
-          ],
-          [
-            '@babel/plugin-transform-react-jsx',
-            { pragma: '__cssprop' },
-            'twin.macro',
-          ],
-        ],
-        presets: [
-          [
-            '@babel/preset-react',
-            {
-              runtime: 'automatic',
-            },
-          ],
-        ],
-      },
-    }),
-  ],
+  plugins: [react()],
   base: '/car-rent/',
+  server: {
+    open: '/index.html',
+    port: 5000,
+  },
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, './', 'src'),
+    },
+  },
 });
