@@ -1,3 +1,7 @@
-export default function Catalog() {
-  return <p>Catalog</p>;
-}
+import { Container } from '../../components/Container';
+
+export const Catalog = () => (
+  <Container>
+    <p>Catalog</p>
+  </Container>
+);

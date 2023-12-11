@@ -1,3 +1,3 @@
-export { default as Homepage } from './Homepage/Homepage';
-export { default as Catalog } from './Catalog/Catalog';
-export { default as Favorites } from './Favorites/Favorites';
+export * from './Homepage/Homepage';
+export * from './Catalog/Catalog';
+export * from './Favorites/Favorites';

@@ -1,9 +1,13 @@
-import { Global, css } from '@emotion/react';
+import { css } from '@emotion/react';
+import '@fontsource-variable/manrope';
+import { theme } from './theme';
+import { fontSizes } from './units';
 
 export default function globalStyles() {
   return css`
     :root {
-      font-size: 1em;
+      font-family: ${theme.typography.fontFamily};
+      font-size: ${fontSizes.medium};
     }
 
     body {
@@ -18,7 +22,7 @@ export default function globalStyles() {
         monospace;
     }
 
-    /* Reset */
+    /* ---------------------------------- Reset --------------------------------- */
 
     h1,
     h2,

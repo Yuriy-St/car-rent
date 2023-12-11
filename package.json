@@ -5,7 +5,8 @@
   "type": "module",
   "homepage": "https://yuriy-st.github.io/car-rent/",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
+    "dev": "vite -m development",
     "build": "vite build",
     "lint:js": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -24,6 +25,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.2",
     "react-router-dom": "^6.20.1",
+    "react-select": "^5.8.0",
     "redux-persist": "^6.0.0",
     "rollup": "^4.7.0"
   },

@@ -1,3 +1,7 @@
-export default function Homepage() {
-  return <p>Homepage</p>;
-}
+import { Container } from '../../components/Container';
+
+export const Homepage = () => (
+  <Container>
+    <p>Homepage</p>
+  </Container>
+);
